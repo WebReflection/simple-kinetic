@@ -8,7 +8,7 @@
 Install with [Bower](http://bower.io):
 
 ```
-bower install --save SimpleKinetic
+bower install --save simple-kinetic
 ```
 
 The component can be used as a Common JS module, an AMD module, or a global.
