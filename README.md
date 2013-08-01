@@ -1,7 +1,6 @@
 # SimpleKinetic
 
-[![Build Status](https://secure.travis-ci.org/user/SimpleKinetic.png?branch=master)](http://travis-ci.org/user/SimpleKinetic)
-
+[![build status](https://secure.travis-ci.org/WebReflection/simple-kinetic.png)](http://travis-ci.org/WebReflection/simple-kinetic)
 
 ## Installation
 
