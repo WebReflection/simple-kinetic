@@ -1,6 +1,4 @@
-/*! SimpleKinetic v0.0.0 - MIT license */
-
-// bower register simple-kinetic git://repo
+/*! SimpleKinetic v0.1.0 - MIT license */
 
 ;(function (global) { function moduleDefinition(/*dependency*/) {
 
