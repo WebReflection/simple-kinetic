@@ -1,4 +1,4 @@
-/*! SimpleKinetic v0.1.0 - MIT license */
+/*! SimpleKinetic v0.1.1 - MIT license */
 
 ;(function (global) { function moduleDefinition(/*dependency*/) {
 
@@ -47,11 +47,19 @@ function SimpleKinetic(options) {
   }
 }
 
-SimpleKineticPrototype.init = function (x, y, xdist, ydist) {
+/** Accordingly with start and end point, starts eventually kinetics
+ * @param   Number    current x as start value
+ * @param   Number    current y as start value
+ * @param   Number    xdist distance as force or end x point
+ * @param   Number    ydist distance as force or end y point
+ * @param   Boolean   optional destination point. false by default, true to use it
+ * @param   Boolean   optional destination point. false by default, true to use it
+ */
+SimpleKineticPrototype.init = function (x, y, xdist, ydist, xdest, ydest) {
   var
       self = clear(this),
-      xdist1 = (abs(xdist) < 1 ? 0 : xdist) * multiplier,
-      ydist1 = (abs(ydist) < 1 ? 0 : ydist) * multiplier,
+      xdist1 = (abs(xdist) < 1 ? 0 : xdist) * (xdest ? 1 : multiplier),
+      ydist1 = (abs(ydist) < 1 ? 0 : ydist) * (ydest ? 1 : multiplier),
       xdist2 = xdist1 * xdist1,
       ydist2 = ydist1 * ydist1,
       distance = sqrt(xdist2 + ydist2),
