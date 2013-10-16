@@ -55,7 +55,9 @@ function SimpleKinetic(options) {
  * @param   Boolean   optional destination point. false by default, true to use it
  * @param   Boolean   optional destination point. false by default, true to use it
  */
-SimpleKineticPrototype.init = function (x, y, xdist, ydist, xdest, ydest) {
+SimpleKineticPrototype.init = function (
+  x, y, xdist, ydist, xdest, ydest // be sure this is in with v0.1.2
+) {
   var
       self = clear(this),
       xdist1 = (abs(xdist) < 1 ? 0 : xdist) * (xdest ? 1 : multiplier),
