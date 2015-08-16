@@ -14,7 +14,7 @@ files = [
   MOCHA,
   MOCHA_ADAPTER,
   'SimpleKinetic.js',
-  'bower_components/chai/chai.js',
+  'node_modules/chai/chai.js',
   'test/**/*.js'
 ];
 

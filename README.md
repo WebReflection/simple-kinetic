@@ -1,54 +1,30 @@
-# SimpleKinetic
+# SimpleKinetic [![build status](https://secure.travis-ci.org/WebReflection/simple-kinetic.svg)](http://travis-ci.org/WebReflection/simple-kinetic)
 
-[![build status](https://secure.travis-ci.org/WebReflection/simple-kinetic.png)](http://travis-ci.org/WebReflection/simple-kinetic)
+A basic utility to add kinetics effect.
 
-## Installation
 
-Install with [Bower](http://bower.io):
+#### Basic Example
 
+```js
+var sk = new SimpleKinetic({
+  onstart: function (
+    currentX, currentY,
+    diffX, diffY,
+    endX, endY
+  ) {
+    console.log('start', arguments);
+  },
+  onmove: function (cx, cy, dx, dy, ex, ey) {
+    console.log('move', arguments);
+  },
+  onend: function (cx, cy, dx, dy, ex, ey) {
+    console.log('end', arguments);
+  },
+  oncancel: function (cx, cy, dx, dy, ex, ey) {
+    console.log('cancel', arguments);
+  }
+});
+
+// check the log
+sk.init(0, 0, 10, 10, true, false);
 ```
-bower install --save simple-kinetic
-```
-
-The component can be used as a Common JS module, an AMD module, or a global.
-
-
-## API
-
-### SimpleKinetic()
-
-
-## Testing
-
-Install [Node](http://nodejs.org) (comes with npm) and Bower.
-
-From the repo root, install the project's development dependencies:
-
-```
-npm install
-bower install
-```
-
-Testing relies on the Karma test-runner. If you'd like to use Karma to
-automatically watch and re-run the test file during development, it's easiest
-to globally install Karma and run it from the CLI.
-
-```
-npm install -g karma
-karma start
-```
-
-To run the tests in Firefox, just once, as CI would:
-
-```
-npm test
-```
-
-
-## Browser support
-
-* Google Chrome (latest)
-* Opera (latest)
-* Firefox 4+
-* Safari 5+
-* Internet Explorer 8+

@@ -1,11 +1,29 @@
 {
-  "name": "SimpleKinetic",
-  "description": "",
-  "version": "0.1.2",
-  "devDependencies": {
-    "karma": "~0.8.5"
-  },
+  "name": "simple-kinetic",
+  "description": "A basic utility to add kinetics effect.",
+  "license": "MIT",
+  "version": "0.2.0",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --browsers Firefox --single-run"
-  }
+    "test": "karma start --browsers Firefox --single-run"
+  },
+  "main": "SimpleKinetic.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "karma": "^0.8.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/simple-kinetic.git"
+  },
+  "keywords": [
+    "kinetics"
+  ],
+  "author": "Andrea Giammarchi",
+  "bugs": {
+    "url": "https://github.com/WebReflection/simple-kinetic/issues"
+  },
+  "homepage": "https://github.com/WebReflection/simple-kinetic#readme"
 }
